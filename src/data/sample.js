@@ -30,6 +30,17 @@ const DATA = Array.from({ length: 20 }).map((_, i) => ({
   color: RANDOM_COLORS[i % RANDOM_COLORS.length],
 }));
 
+const HOME_DATA = Array.from({ length: 10 }).map((_, i) => ({
+  id: `home_${i}`,
+  text: VIDEOLIST[i % VIDEOLIST.length].title,
+  source: VIDEOLIST[i % VIDEOLIST.length].source,
+  videoID: VIDEOLIST[i % VIDEOLIST.length].id,
+  thumbnail: VIDEOLIST[i % VIDEOLIST.length].thumbnail,
+  height: 200,
+  color: RANDOM_COLORS[i % RANDOM_COLORS.length],
+}));
+
 export {
   DATA,
+  HOME_DATA,
 };

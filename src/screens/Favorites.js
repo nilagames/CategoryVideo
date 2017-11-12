@@ -25,7 +25,7 @@ class FavoritesScreen extends Component {
           onRefresh={this._refreshRequest}
           refreshing={this.state.isRefreshing}
           data={DATA}
-          renderItem={({ item }) => <VideoList item={item} />}
+          renderItem={({ item }) => <VideoList item={item} height={'200px'} />}
           getHeightForItem={({ item }) => item.height + 2}
           numColumns={1}
           keyExtractor={item => item.id}

@@ -28,15 +28,15 @@ const SourceText = styled.Text`
 const ImageContainer = styled.View`
   position: relative;
   overflow: hidden;
-  height: 200px;
+  height: ${props => props.height};
 `;
 
 class VideoList extends PureComponent {
   render() {
-    const { item } = this.props;
+    const { item, height } = this.props;
     return (
       <CellView {...item}>
-        <ImageContainer>
+        <ImageContainer height={height}>
           <CachedImage source={{uri : item.thumbnail}} resizeMode="stretch"
             style={{
               position: 'absolute',
