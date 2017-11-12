@@ -19,9 +19,6 @@ class VideoScreen extends Component {
 
   videoState(e) {
     if (e.state == 'playing') {
-      if (this.state.fullscreen) {
-        this.setState({ isPlaying: true, fullscreen: true });
-      }
     }
   }
 
@@ -29,6 +26,7 @@ class VideoScreen extends Component {
 
   render() {
     const { params } = this.props.navigation.state;
+    console.log(params);
     return (
       <ScrollView>
         <YouTube
@@ -36,7 +34,7 @@ class VideoScreen extends Component {
             this._youTubeRef = component;
           }}
           apiKey={config.YTKey}
-          videoId={params.videoId}
+          videoId={params.videoID}
           // Variables
           play={this.state.isPlaying}
           loop={this.state.isLooping}

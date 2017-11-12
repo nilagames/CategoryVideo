@@ -37,7 +37,7 @@ class VideoList extends PureComponent {
     const { item, height, navigate } = this.props;
 
     return (
-      <TouchableHighlight onPress={() => navigate('Video', { videoId: item.id })}>
+      <TouchableHighlight onPress={() => navigate('Video', { videoID: item.videoID })}>
         <CellView {...item}>
           <ImageContainer height={height}>
             <CachedImage source={{uri : item.thumbnail}} resizeMode="stretch"
