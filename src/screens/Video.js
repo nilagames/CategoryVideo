@@ -10,9 +10,9 @@ import YouTube from 'react-native-youtube';
 
 class VideoScreen extends Component {
   state = {
-    isPlaying: false,
+    isPlaying: true,
     isLooping: false,
-    fullscreen: false,
+    fullscreen: true,
   };
 
   videoError(e) {}
