@@ -10,7 +10,7 @@ import { default as Ionicons } from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './screens/Home';
 import FavoritesScreen from './screens/Favorites';
-import CategoryScreen from './screens/Category';
+import VideoScreen from './screens/Video';
 
 import { HamburgerIcon, BackIcon } from './components/icons';
 
@@ -83,17 +83,17 @@ const AppMainTab = TabNavigator({
 
 const AppMainStack = StackNavigator({
   Home: { screen: AppMainTab },
-  Category: {
-    screen: CategoryScreen,
+  Video: {
+    screen: VideoScreen,
     navigationOptions: ({ navigation }) => ({
-      drawerLabel: 'Category',
+      drawerLabel: 'Video',
       drawerIcon: ({ tintColor }) => (
         <Ionicons name="md-videocam" size={23} color={tintColor} />
       ),
       headerStyle: {
         backgroundColor: colors.headerStyle,
       },
-      headerTitle: 'Category',
+      headerTitle: 'Video',
       headerTitleStyle: {
         color: colors.WHITE,
       },

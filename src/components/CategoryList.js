@@ -24,7 +24,7 @@ class CategoryList extends Component {
         <FlatList
           data={this.props.data}
           keyExtractor={item => item.id}
-          renderItem={({ item }) => <VideoList item={item} height={'140px'} />}
+          renderItem={({ item }) => <VideoList item={item} height={'140px'} navigate={this.props.navigate} />}
           horizontal={true}
         />
       </CategoryView>

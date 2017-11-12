@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TouchableHighlight } from 'react-native';
 import styled from 'styled-components/native';
 import { CachedImage } from "react-native-img-cache";
 
@@ -34,17 +34,20 @@ const ImageContainer = styled.View`
 
 class VideoList extends PureComponent {
   render() {
-    const { item, height } = this.props;
+    const { item, height, navigate } = this.props;
+
     return (
-      <CellView {...item}>
-        <ImageContainer height={height}>
-          <CachedImage source={{uri : item.thumbnail}} resizeMode="stretch"
-            style={styles.thumbnail}
-          />
-        </ImageContainer>
-        <TitleText>{item.text}</TitleText>
-        <SourceText>{item.source}</SourceText>
-      </CellView>
+      <TouchableHighlight onPress={() => navigate('Video', { videoId: item.id })}>
+        <CellView {...item}>
+          <ImageContainer height={height}>
+            <CachedImage source={{uri : item.thumbnail}} resizeMode="stretch"
+              style={styles.thumbnail}
+            />
+          </ImageContainer>
+          <TitleText>{item.text}</TitleText>
+          <SourceText>{item.source}</SourceText>
+        </CellView>
+      </TouchableHighlight>
     );
   }
 };
