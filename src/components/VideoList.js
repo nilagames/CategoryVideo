@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 import { CachedImage } from "react-native-img-cache";
 
@@ -38,13 +39,7 @@ class VideoList extends PureComponent {
       <CellView {...item}>
         <ImageContainer height={height}>
           <CachedImage source={{uri : item.thumbnail}} resizeMode="stretch"
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              bottom: 0,
-              right: 0,
-            }}
+            style={styles.thumbnail}
           />
         </ImageContainer>
         <TitleText>{item.text}</TitleText>
@@ -53,5 +48,16 @@ class VideoList extends PureComponent {
     );
   }
 };
+
+var styles = StyleSheet.create({
+  thumbnail: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
+});
+
 
 export default VideoList;
