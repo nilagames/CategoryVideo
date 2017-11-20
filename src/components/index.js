@@ -3,6 +3,7 @@ import CustomDrawerContent from './CustomDrawerContent';
 import Cell from './Cell';
 import VideoList from './VideoList';
 import CategoryList from './CategoryList';
+import Category from './Category';
 
 export {
   Button,
@@ -10,4 +11,5 @@ export {
   Cell,
   VideoList,
   CategoryList,
+  Category,
 };

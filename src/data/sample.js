@@ -51,11 +51,13 @@ const CATEGORIES_RAW = [
   { name: 'Animals', image: '', url: '' },
 ];
 
-const CATEGORIES = CATEGORIES_RAW.map((_, i) => ({
+const CATEGORIES = CATEGORIES_RAW.map((_, i) => {
   _.id = `category_${i}`;
   _.image = VIDEOLIST[i % VIDEOLIST.length].thumbnail;
+  _.color = RANDOM_COLORS[i % RANDOM_COLORS.length];
+  _.height = 260;
   return _;
-}));
+});
 
 export {
   DATA,

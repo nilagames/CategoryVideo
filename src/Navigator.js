@@ -66,8 +66,8 @@ const AppMainTab = TabNavigator({
     inactiveTintColor: colors.inactiveTintColor,
     inactiveBackgroundColor: colors.tabBG,
     activeBackgroundColor: colors.tabBG,
-    showIcon: true,
-    showLabel: Platform.OS === 'ios',
+    showIcon: Platform.OS === 'ios',
+    showLabel: true,
     indicatorStyle: {
       backgroundColor: colors.WHITE,
     },

@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
+import MasonryList from '@appandflow/masonry-list';
 import styled from 'styled-components/native';
 
-import { CategoryList } from '../components';
-import { HOME_DATA } from '../data/sample';
+import { Category } from '../components';
+import { CATEGORIES } from '../data/sample';
+
+const MasonryView = styled.View`
+  marginBottom: 10px;
+`;
 
 class HomeScreen extends Component {
+  state = { isRefreshing: false };
+
+  _refreshRequest = () => {
+    this.setState({ isRefreshing: true });
+    setTimeout(() => {
+      this.setState({ isRefreshing: false });
+    }, 1000);
+  };
+
   render() {
     return (
-      <ScrollView>
-        <CategoryList data={HOME_DATA} text={'Alphabets'} navigate={this.props.navigation.navigate} />
-        <CategoryList data={HOME_DATA} text={'Fruits & Vegetables'} navigate={this.props.navigation.navigate} />
-        <CategoryList data={HOME_DATA} text={'Animals'} navigate={this.props.navigation.navigate} />
-        <CategoryList data={HOME_DATA} text={'Shapes'} navigate={this.props.navigation.navigate} />
-      </ScrollView>
+      <MasonryView>
+        <MasonryList
+          onRefresh={this._refreshRequest}
+          refreshing={this.state.isRefreshing}
+          data={CATEGORIES}
+          renderItem={({ item }) => <Category item={item} height={'200px'} navigate={this.props.navigation.navigate} />}
+          getHeightForItem={({ item }) => item.height + 2}
+          numColumns={1}
+          keyExtractor={item => item.id}
+        />
+      </MasonryView>
     );
   }
 }
