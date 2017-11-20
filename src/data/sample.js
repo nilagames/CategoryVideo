@@ -19,7 +19,8 @@ const VIDEOLIST = [
     title: 'Mary Had A Little Lamb',
     source: 'Vimeo'
   }
-]
+];
+
 const DATA = Array.from({ length: 20 }).map((_, i) => ({
   id: `video_${i}`,
   text: VIDEOLIST[i % VIDEOLIST.length].title,
@@ -40,7 +41,24 @@ const HOME_DATA = Array.from({ length: 10 }).map((_, i) => ({
   color: RANDOM_COLORS[i % RANDOM_COLORS.length],
 }));
 
+const CATEGORIES_RAW = [
+  { name: 'Alphabets', image: '', url: '' },
+  { name: 'Fruits', image: '', url: '' },
+  { name: 'Vehicles', image: '', url: '' },
+  { name: 'Phonics', image: '', url: '' },
+  { name: 'Vegetables', image: '', url: '' },
+  { name: 'Body Parts', image: '', url: '' },
+  { name: 'Animals', image: '', url: '' },
+];
+
+const CATEGORIES = CATEGORIES_RAW.map((_, i) => ({
+  _.id = `category_${i}`;
+  _.image = VIDEOLIST[i % VIDEOLIST.length].thumbnail;
+  return _;
+}));
+
 export {
   DATA,
   HOME_DATA,
+  CATEGORIES,
 };

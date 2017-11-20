@@ -1,4 +1,4 @@
-package com.preschoolkids;
+package com.preschoolvideos;
 
 import android.app.Application;
 
