@@ -42,13 +42,13 @@ const HOME_DATA = Array.from({ length: 10 }).map((_, i) => ({
 }));
 
 const CATEGORIES_RAW = [
-  { name: 'Alphabets', image: '', url: '' },
-  { name: 'Fruits', image: '', url: '' },
-  { name: 'Vehicles', image: '', url: '' },
-  { name: 'Phonics', image: '', url: '' },
-  { name: 'Vegetables', image: '', url: '' },
-  { name: 'Body Parts', image: '', url: '' },
-  { name: 'Animals', image: '', url: '' },
+  { name: 'Alphabets', image: '', url: 'alphabets' },
+  { name: 'Fruits', image: '', url: 'fruits' },
+  { name: 'Vehicles', image: '', url: 'vehicles' },
+  { name: 'Phonics', image: '', url: 'phonics' },
+  { name: 'Vegetables', image: '', url: 'veg' },
+  { name: 'Body Parts', image: '', url: 'body' },
+  { name: 'Animals', image: '', url: 'animals' },
 ];
 
 const CATEGORIES = CATEGORIES_RAW.map((_, i) => {

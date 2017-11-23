@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <ThemeProvider theme={colors}>
         <Root>
-          <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
+          <StatusBar barStyle={'light-content'} backgroundColor={'transparent'} translucent />
           { Platform.OS === 'android' && Platform.Version >= 20 ? <StatusBarAndroid /> : null }
           <Navigator />
         </Root>

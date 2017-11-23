@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, TouchableHighlight } from 'react-native';
+import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import styled from 'styled-components/native';
 import { CachedImage } from "react-native-img-cache";
 
@@ -37,7 +37,7 @@ class VideoList extends PureComponent {
     const { item, height, navigate } = this.props;
 
     return (
-      <TouchableHighlight onPress={() => navigate('Video', { videoID: item.videoID })}>
+      <TouchableWithoutFeedback onPress={() => navigate('Video', { videoID: item.videoID })}>
         <CellView {...item}>
           <ImageContainer height={height}>
             <CachedImage source={{uri : item.thumbnail}} resizeMode="stretch"
@@ -47,7 +47,7 @@ class VideoList extends PureComponent {
           <TitleText>{item.text}</TitleText>
           <SourceText>{item.source}</SourceText>
         </CellView>
-      </TouchableHighlight>
+      </TouchableWithoutFeedback>
     );
   }
 };

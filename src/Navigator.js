@@ -11,9 +11,7 @@ import { default as Ionicons } from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './screens/Home';
 import FavoritesScreen from './screens/Favorites';
 import VideoScreen from './screens/Video';
-
 import { HamburgerIcon, BackIcon } from './components/icons';
-
 import { CustomDrawerContent } from './components';
 import { colors } from './utils/constants';
 
@@ -42,18 +40,18 @@ const AppMainTab = TabNavigator({
   Favorites: {
     screen: FavoritesScreen,
     navigationOptions: ({ navigation }) => ({
-      drawerLabel: 'Favorites',
+      drawerLabel: 'Today\'s Playlist',
       drawerIcon: ({ tintColor }) => (
         <FontAwesome name="heartbeat" size={23} color={tintColor} />
       ),
-      tabBarLabel: 'Favorites',
+      tabBarLabel: 'Today\'s Playlist',
       tabBarIcon: ({ tintColor }) => (
         <FontAwesome name="heartbeat" size={23} color={tintColor} />
       ),
       headerStyle: {
         backgroundColor: colors.headerStyle,
       },
-      headerTitle: 'Favorites',
+      headerTitle: 'Today\'s Playlist',
       headerTitleStyle: {
         color: colors.WHITE,
       },
@@ -86,18 +84,7 @@ const AppMainStack = StackNavigator({
   Video: {
     screen: VideoScreen,
     navigationOptions: ({ navigation }) => ({
-      drawerLabel: 'Video',
-      drawerIcon: ({ tintColor }) => (
-        <Ionicons name="md-videocam" size={23} color={tintColor} />
-      ),
-      headerStyle: {
-        backgroundColor: colors.headerStyle,
-      },
-      headerTitle: 'Video',
-      headerTitleStyle: {
-        color: colors.WHITE,
-      },
-      headerLeft: <BackIcon onPress={() => navigation.goBack()} />,
+      header: null,
     })
   },
 }, {

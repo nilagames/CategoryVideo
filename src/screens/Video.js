@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  PixelRatio,
-  Dimensions,
-  ScrollView,
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import config from '../../config';
 import YouTube from 'react-native-youtube';
 
@@ -15,10 +10,21 @@ class VideoScreen extends Component {
     fullscreen: true,
   };
 
+  goBack() {
+    this.props.navigation.goBack();
+  }
+
   videoError(e) {}
 
   videoState(e) {
-    if (e.state == 'playing') {
+    if (e.state == 'ended') {
+      this.goBack();
+    }
+  }
+
+  changeFullScreen(e) {
+    if (!e.isFullscreen) {
+      this.goBack();
     }
   }
 
@@ -27,7 +33,7 @@ class VideoScreen extends Component {
   render() {
     const { params } = this.props.navigation.state;
     return (
-      <ScrollView>
+      <View style={styles.backgroundVideo}>
         <YouTube
           ref={component => {
             this._youTubeRef = component;
@@ -38,30 +44,33 @@ class VideoScreen extends Component {
           play={this.state.isPlaying}
           loop={this.state.isLooping}
           fullscreen={this.state.fullscreen}
-          controls={2}
-          showinfo={true}
-          modestbranding={false}
+          controls={1}
+          showinfo={false}
+          modestbranding={true}
           rel={false}
           showFullscreenButton={false}
-          style={styles.backgroundVideo}
           // Methods
+          onChangeFullscreen = {(e) => { this.changeFullScreen(e) }}
           onError={(e) => { this.videoError(e.error) }}
           onChangeState={(e) => { this.videoState({ e: e, state: e.state }) }}
           onReady={(e) => { this.videoState({ e: e, state: 'ready' }) }}
           onProgress={(e) => { this.videoProgress({ e: e, currentTime: e.currentTime, duration: e.duration }) }}
           onChangeQuality={(e) => { this.videoState({ e: e, quality: e.quality }) }}
         />
-      </ScrollView>
+      </View>
     );
   }
 }
 
-
 // Later on in your styles..
 var styles = StyleSheet.create({
   backgroundVideo: {
-    alignSelf: 'stretch',
-    height: PixelRatio.roundToNearestPixel(Dimensions.get('window').width / (16 / 9)),
+    backgroundColor: '#000000',
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
   },
 });
 
