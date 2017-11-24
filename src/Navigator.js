@@ -87,6 +87,23 @@ const AppMainStack = StackNavigator({
       header: null,
     })
   },
+  CategoryVideos: {
+    screen: FavoritesScreen,
+    navigationOptions: ({ navigation }) => ({
+      drawerLabel: `${ navigation.state.params.item.name }`,
+      drawerIcon: ({ tintColor }) => (
+        <Ionicons name="md-videocam" size={23} color={tintColor} />
+      ),
+      headerStyle: {
+        backgroundColor: colors.headerStyle,
+      },
+      headerTitle: `${ navigation.state.params.item.name }`,
+      headerTitleStyle: {
+        color: colors.WHITE,
+      },
+      headerLeft: <BackIcon onPress={() => navigation.goBack()} />,
+    }),
+  },
 }, {
   cardStyle: {
     backgroundColor: colors.cardBG,
