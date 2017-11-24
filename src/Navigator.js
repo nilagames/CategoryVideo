@@ -15,7 +15,7 @@ import { HamburgerIcon, BackIcon } from './components/icons';
 import { CustomDrawerContent } from './components';
 import { colors } from './utils/constants';
 
-const AppMainTab = TabNavigator({
+const Routes = {
   Home: {
     screen: HomeScreen,
     navigationOptions: ({ navigation }) => ({
@@ -58,7 +58,9 @@ const AppMainTab = TabNavigator({
       headerLeft: <HamburgerIcon onPress={() => navigation.navigate('DrawerOpen')} />,
     })
   },
-}, {
+};
+
+const AppMainTab = TabNavigator(Routes, {
   tabBarOptions: {
     activeTintColor: colors.WHITE,
     inactiveTintColor: colors.inactiveTintColor,

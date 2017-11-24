@@ -11,8 +11,8 @@ const DrawerContainer = styled.View`
 `;
 
 const AvatarContainer = styled.View`
-  flex: 4;
-  top: 30;
+  flex: 3;
+  top: 10;
   alignItems: center;
   justifyContent: center;
 `;
@@ -28,17 +28,20 @@ const ItemContainer = styled.View`
   flex: 6;
 `;
 
-const CustomDrawerContent = (props) => (
-  <ContainerView>
-    <DrawerContainer>
-      <AvatarContainer>
-        <Avatar />
-      </AvatarContainer>
-      <ItemContainer>
-        <DrawerItems {...props} />
-      </ItemContainer>
-    </DrawerContainer>
-  </ContainerView>
-);
+const CustomDrawerContent = (props) => {
+  console.log(props);
+  return (
+    <ContainerView>
+      <DrawerContainer>
+        <AvatarContainer>
+          <Avatar />
+        </AvatarContainer>
+        <ItemContainer>
+          <DrawerItems {...props} />
+        </ItemContainer>
+      </DrawerContainer>
+    </ContainerView>
+  );
+};
 
 export default CustomDrawerContent;
