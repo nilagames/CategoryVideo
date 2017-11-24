@@ -1,4 +1,5 @@
 import React from 'react';
+import { View, Text } from 'react-native';
 import { DrawerItems } from 'react-navigation';
 import styled from 'styled-components/native';
 
@@ -30,6 +31,7 @@ const ItemContainer = styled.View`
 
 const CustomDrawerContent = (props) => {
   console.log(props);
+  const { navigate } = props.navigation;
   return (
     <ContainerView>
       <DrawerContainer>
@@ -37,7 +39,9 @@ const CustomDrawerContent = (props) => {
           <Avatar />
         </AvatarContainer>
         <ItemContainer>
-          <DrawerItems {...props} />
+          <View onPress={() => navigate('Favorites')}>
+            <Text>Home</Text>
+          </View>
         </ItemContainer>
       </DrawerContainer>
     </ContainerView>

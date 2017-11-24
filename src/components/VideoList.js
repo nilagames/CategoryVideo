@@ -72,7 +72,7 @@ var styles = StyleSheet.create({
     bottom: 0,
     right: 0,
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     width: '100%',
     height: '100%',
     zIndex: 1,

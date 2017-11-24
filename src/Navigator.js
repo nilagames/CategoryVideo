@@ -3,7 +3,6 @@ import { Platform } from 'react-native';
 import {
   TabNavigator,
   StackNavigator,
-  DrawerNavigator,
 } from 'react-navigation';
 import { default as FontAwesome } from 'react-native-vector-icons/FontAwesome';
 import { default as Ionicons } from 'react-native-vector-icons/Ionicons';
@@ -12,7 +11,6 @@ import HomeScreen from './screens/Home';
 import FavoritesScreen from './screens/Favorites';
 import VideoScreen from './screens/Video';
 import { HamburgerIcon, BackIcon } from './components/icons';
-import { CustomDrawerContent } from './components';
 import { colors } from './utils/constants';
 
 const Routes = {
@@ -113,22 +111,8 @@ const AppMainStack = StackNavigator({
   mode: 'modal',
 });
 
-const AppDrawer = DrawerNavigator({
-  Home: { screen: AppMainStack },
-}, {
-  contentComponent: props =>
-    (<CustomDrawerContent
-      {...props}
-    />),
-  contentOptions: {
-    activeBackgroundColor: colors.drawerActiveBG,
-    activeTintColor: colors.WHITE,
-    inactiveTintColor: colors.drawerInactiveColor,
-  },
-});
-
 const Navigator = TabNavigator({
-  Main: { screen: AppDrawer },
+  Main: { screen: AppMainStack },
 }, {
   navigationOptions: {
     tabBarVisible: false,
