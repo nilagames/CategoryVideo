@@ -40,18 +40,18 @@ const AppMainTab = TabNavigator({
   Favorites: {
     screen: FavoritesScreen,
     navigationOptions: ({ navigation }) => ({
-      drawerLabel: 'Today\'s Playlist',
+      drawerLabel: 'Daily Playlist',
       drawerIcon: ({ tintColor }) => (
         <FontAwesome name="heartbeat" size={23} color={tintColor} />
       ),
-      tabBarLabel: 'Today\'s Playlist',
+      tabBarLabel: 'Daily Playlist',
       tabBarIcon: ({ tintColor }) => (
         <FontAwesome name="heartbeat" size={23} color={tintColor} />
       ),
       headerStyle: {
         backgroundColor: colors.headerStyle,
       },
-      headerTitle: 'Today\'s Playlist',
+      headerTitle: 'Daily Playlist',
       headerTitleStyle: {
         color: colors.WHITE,
       },
