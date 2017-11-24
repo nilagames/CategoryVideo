@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 import styled from 'styled-components/native';
 import { CachedImage } from "react-native-img-cache";
+
+import { PlayIcon } from './icons';
 
 const CellView = styled.View`
   margin: 10px;
@@ -40,6 +42,9 @@ class VideoList extends PureComponent {
       <TouchableWithoutFeedback onPress={() => navigate('Video', { videoID: item.videoID })}>
         <CellView {...item}>
           <ImageContainer height={height}>
+            <View style={styles.overlay}>
+              <PlayIcon onPress={() => navigate('Video', { videoID: item.videoID })} />
+            </View>
             <CachedImage source={{uri : item.thumbnail}} resizeMode="stretch"
               style={styles.thumbnail}
             />
@@ -60,6 +65,18 @@ var styles = StyleSheet.create({
     bottom: 0,
     right: 0,
   },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    width: '100%',
+    height: '100%',
+    zIndex: 1,
+  }
 });
 
 export default VideoList;
