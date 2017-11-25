@@ -57,7 +57,7 @@ const AppMainTab = TabNavigator(Routes, {
     },
     upperCaseLabel: true,
   },
-  tabBarPosition: 'top',
+  tabBarPosition: Platform.OS === 'ios' ? 'bottom' : 'top',
   swipeEnabled: true,
   animationEnabled: true,
 });
