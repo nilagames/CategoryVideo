@@ -8,7 +8,7 @@ import { CATEGORIES } from '../data/sample';
 import { AppoDealInit } from '../utils';
 
 const MasonryView = styled.View`
-  marginBottom: 10px;
+  marginBottom: 50px;
 `;
 
 class HomeScreen extends Component {
