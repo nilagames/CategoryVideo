@@ -3,19 +3,19 @@ import { RANDOM_COLORS } from '../utils/constants';
 const VIDEOLIST = [
   {
     id: '1dttq5p0xUM',
-    thumbnail: 'https://i.ytimg.com/vi/1dttq5p0xUM/maxresdefault.jpg',
+    thumbnail: 'https://i.ytimg.com/vi/1dttq5p0xUM/mqdefault.jpg',
     title: 'Black Sheep - The Joy of Sharing!',
     source: 'Chuchu TV - youtube'
   },
   {
     id: 'B5csN8gQY4E',
-    thumbnail: 'https://i.ytimg.com/vi/B5csN8gQY4E/maxresdefault.jpg',
+    thumbnail: 'https://i.ytimg.com/vi/B5csN8gQY4E/mqdefault.jpg',
     title: 'ABCD Song in Alphabet Water Park',
     source: 'King & Queen'
   },
   {
     id: 'CkRdvGmcCBE',
-    thumbnail: 'https://i.ytimg.com/vi/CkRdvGmcCBE/maxresdefault.jpg',
+    thumbnail: 'https://i.ytimg.com/vi/CkRdvGmcCBE/mqdefault.jpg',
     title: 'Mary Had A Little Lamb',
     source: 'Vimeo'
   }
