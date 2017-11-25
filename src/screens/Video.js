@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import config from '../../config';
 import YouTube from 'react-native-youtube';
 import Orientation from 'react-native-orientation';
+import { AppoDealHide } from '../utils';
 
 class VideoScreen extends Component {
   state = {
@@ -13,6 +14,10 @@ class VideoScreen extends Component {
 
   goBack() {
     this.props.navigation.goBack();
+  }
+
+  componentWillMount() {
+    AppoDealHide();
   }
 
   componentDidMount() {

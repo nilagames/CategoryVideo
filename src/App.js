@@ -6,7 +6,7 @@ import styled from 'styled-components/native';
 import Navigator from './Navigator';
 import { FloatingAction } from './components';
 import { colors } from './utils/constants';
-import { AppoDealInit, AppoDealShow } from './utils';
+import { AppoDealInit, AppoDealShow, getCurrentRouteName } from './utils';
 
 const Root = styled.View`
   flex: 1;
@@ -30,7 +30,17 @@ class App extends Component {
         <Root>
           <StatusBar barStyle={'light-content'} backgroundColor={'transparent'} translucent />
           { Platform.OS === 'android' && Platform.Version >= 20 ? <StatusBarAndroid /> : null }
-          <Navigator />
+          <Navigator
+            onNavigationStateChange={(prevState, currentState) => {
+              const currentScreen = getCurrentRouteName(currentState);
+              const prevScreen = getCurrentRouteName(prevState);
+
+              if (prevScreen !== currentScreen) {
+                console.log("inge thaen kudi iruken");
+                AppoDealShow();
+              }
+            }}
+          />
         </Root>
       </ThemeProvider>
     );

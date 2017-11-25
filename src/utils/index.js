@@ -15,11 +15,7 @@ export const AppoDealInit = () => {
 };
 
 export const AppoDealShow = () => {
-  Appodeal.isLoaded(Appodeal.BANNER, (isLoaded) => {
-    if (!isLoaded) {
-      Appodeal.show(Appodeal.BANNER, "initial_screen", (result) => console.log(result));
-    }
-  });
+  Appodeal.show(Appodeal.BANNER, "initial_screen", (result) => console.log(result));
 };
 
 export const AppoDealHide = () => {
@@ -28,4 +24,17 @@ export const AppoDealHide = () => {
       Appodeal.hide(Appodeal.BANNER);
     }
   });
+};
+
+// gets the current screen from navigation state
+export const getCurrentRouteName = (navigationState) => {
+  if (!navigationState) {
+    return null;
+  }
+  const route = navigationState.routes[navigationState.index];
+  // dive into nested navigators
+  if (route.routes) {
+    return getCurrentRouteName(route);
+  }
+  return route.routeName;
 };
