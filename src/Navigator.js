@@ -49,7 +49,7 @@ const AppMainTab = TabNavigator(Routes, {
       height: 3,
     },
     labelStyle: {
-      fontSize: 14,
+      fontSize: 16,
       fontWeight: 'bold',
     },
     style: {
