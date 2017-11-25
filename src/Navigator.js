@@ -17,43 +17,21 @@ const Routes = {
   Home: {
     screen: HomeScreen,
     navigationOptions: ({ navigation }) => ({
-      drawerLabel: 'Home',
-      drawerIcon: ({ tintColor }) => (
-        <FontAwesome name="home" size={23} color={tintColor} />
-      ),
-      tabBarLabel: 'Home',
+      tabBarLabel: 'HOME',
       tabBarIcon: ({ tintColor }) => (
         <FontAwesome name="home" size={23} color={tintColor} />
       ),
-      headerStyle: {
-        backgroundColor: colors.headerStyle,
-      },
-      headerTitle: 'Home',
-      headerTitleStyle: {
-        color: colors.WHITE,
-      },
-      headerLeft: <HamburgerIcon onPress={() => navigation.navigate('DrawerOpen')} />,
+      header: null,
     })
   },
   Favorites: {
     screen: FavoritesScreen,
     navigationOptions: ({ navigation }) => ({
-      drawerLabel: 'Daily Playlist',
-      drawerIcon: ({ tintColor }) => (
-        <FontAwesome name="heartbeat" size={23} color={tintColor} />
-      ),
-      tabBarLabel: 'Daily Playlist',
+      tabBarLabel: 'DAILY PLAYLIST',
       tabBarIcon: ({ tintColor }) => (
         <FontAwesome name="heartbeat" size={23} color={tintColor} />
       ),
-      headerStyle: {
-        backgroundColor: colors.headerStyle,
-      },
-      headerTitle: 'Daily Playlist',
-      headerTitleStyle: {
-        color: colors.WHITE,
-      },
-      headerLeft: <HamburgerIcon onPress={() => navigation.navigate('DrawerOpen')} />,
+      header: null,
     })
   },
 };
@@ -68,13 +46,18 @@ const AppMainTab = TabNavigator(Routes, {
     showLabel: true,
     indicatorStyle: {
       backgroundColor: colors.WHITE,
+      height: 3,
+    },
+    labelStyle: {
+      fontSize: 14,
+      fontWeight: 'bold',
     },
     style: {
       backgroundColor: colors.tabBG,
     },
-    upperCaseLabel: false,
+    upperCaseLabel: true,
   },
-  tabBarPosition: 'bottom',
+  tabBarPosition: 'top',
   swipeEnabled: true,
   animationEnabled: true,
 });
