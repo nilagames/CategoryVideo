@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/native';
 import MasonryList from '@appandflow/masonry-list';
-import { VideoList } from '../components';
+import { VideoList, FloatingAction } from '../components';
 import { DATA } from '../data/sample';
 
 const MasonryView = styled.View`
@@ -30,6 +30,7 @@ class FavoritesScreen extends Component {
           numColumns={1}
           keyExtractor={item => item.id}
         />
+        <FloatingAction />
       </MasonryView>
     );
   }

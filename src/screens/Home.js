@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 import MasonryList from '@appandflow/masonry-list';
 import styled from 'styled-components/native';
 
-import { Category } from '../components';
+import { Category, FloatingAction } from '../components';
 import { CATEGORIES } from '../data/sample';
 
 const MasonryView = styled.View`
@@ -32,6 +32,7 @@ class HomeScreen extends Component {
           numColumns={1}
           keyExtractor={item => item.id}
         />
+        <FloatingAction />
       </MasonryView>
     );
   }
