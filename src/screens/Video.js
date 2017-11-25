@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import config from '../../config';
 import YouTube from 'react-native-youtube';
+import Orientation from 'react-native-orientation';
 
 class VideoScreen extends Component {
   state = {
@@ -14,6 +15,14 @@ class VideoScreen extends Component {
     this.props.navigation.goBack();
   }
 
+  componentDidMount() {
+    Orientation.lockToLandscape();
+  }
+
+  componentWillUnmount() {
+    Orientation.unlockAllOrientations();
+  }
+
   videoError(e) {}
 
   videoState(e) {
@@ -23,6 +32,7 @@ class VideoScreen extends Component {
   }
 
   changeFullScreen(e) {
+    console.log(e, "Fullscreen");
     if (!e.isFullscreen) {
       this.goBack();
     }

@@ -3385,6 +3385,12 @@ react-devtools-core@^2.5.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-action-button@^2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/react-native-action-button/-/react-native-action-button-2.8.2.tgz#12a10b66de0904a2849c76cd26d660491a329e13"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-dismiss-keyboard/-/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
@@ -3413,6 +3419,10 @@ react-native-img-cache@^1.5.0:
   resolved "https://registry.yarnpkg.com/react-native-img-cache/-/react-native-img-cache-1.5.0.tgz#f0ac25dd56ba4f713cb5bcc1f9b4c2eea1536e6c"
   dependencies:
     crypto-js "^3.1.9-1"
+
+react-native-orientation@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-orientation/-/react-native-orientation-3.1.0.tgz#ce470fe44a9a47df5be4995b01a1089d3f4a033e"
 
 react-native-tab-view@^0.0.70:
   version "0.0.70"

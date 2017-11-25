@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components/native';
 
 import Navigator from './Navigator';
+import { FloatingAction } from './components';
 import { colors } from './utils/constants';
 
 const Root = styled.View`
@@ -24,6 +25,7 @@ class App extends Component {
           <StatusBar barStyle={'light-content'} backgroundColor={'transparent'} translucent />
           { Platform.OS === 'android' && Platform.Version >= 20 ? <StatusBarAndroid /> : null }
           <Navigator />
+          <FloatingAction />
         </Root>
       </ThemeProvider>
     );
