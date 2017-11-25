@@ -4,6 +4,8 @@ import config from '../../config';
 import YouTube from 'react-native-youtube';
 import Orientation from 'react-native-orientation';
 
+import { AppoDealHide } from '../utils';
+
 class VideoScreen extends Component {
   state = {
     isPlaying: true,
@@ -17,6 +19,7 @@ class VideoScreen extends Component {
 
   componentDidMount() {
     Orientation.lockToLandscape();
+    AppoDealHide();
   }
 
   componentWillUnmount() {

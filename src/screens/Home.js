@@ -5,6 +5,7 @@ import styled from 'styled-components/native';
 
 import { Category, FloatingAction } from '../components';
 import { CATEGORIES } from '../data/sample';
+import { AppoDealInit } from '../utils';
 
 const MasonryView = styled.View`
   marginBottom: 10px;
@@ -19,6 +20,10 @@ class HomeScreen extends Component {
       this.setState({ isRefreshing: false });
     }, 1000);
   };
+
+  componentDidMount() {
+    AppoDealInit();
+  }
 
   render() {
     return (
