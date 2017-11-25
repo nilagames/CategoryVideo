@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/native';
 import MasonryList from '@appandflow/masonry-list';
+
 import { VideoList, FloatingAction } from '../components';
 import { DATA } from '../data/sample';
-import { AppoDealInit } from '../utils';
 
 const MasonryView = styled.View`
   marginBottom: 50px;
@@ -18,10 +18,6 @@ class FavoritesScreen extends Component {
       this.setState({ isRefreshing: false });
     }, 1000);
   };
-
-  componentDidMount() {
-    AppoDealInit();
-  }
 
   render() {
     return (

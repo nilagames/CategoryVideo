@@ -6,6 +6,7 @@ import styled from 'styled-components/native';
 import Navigator from './Navigator';
 import { FloatingAction } from './components';
 import { colors } from './utils/constants';
+import { AppoDealInit, AppoDealShow } from './utils';
 
 const Root = styled.View`
   flex: 1;
@@ -18,7 +19,12 @@ const StatusBarAndroid = styled.View`
 `;
 
 class App extends Component {
+  componentWillMount() {
+    AppoDealInit();
+  }
+
   render() {
+    AppoDealShow();
     return (
       <ThemeProvider theme={colors}>
         <Root>

@@ -12,10 +12,20 @@ export const AppoDealInit = () => {
 
   Appodeal.setAutoCache(Appodeal.BANNER, true);
   Appodeal.initialize(config.appodealKey, Appodeal.BANNER);
+};
 
-  Appodeal.show(Appodeal.BANNER, "initial_screen", (result) => console.log(result));
+export const AppoDealShow = () => {
+  Appodeal.isLoaded(Appodeal.BANNER, (isLoaded) => {
+    if (!isLoaded) {
+      Appodeal.show(Appodeal.BANNER, "initial_screen", (result) => console.log(result));
+    }
+  });
 };
 
 export const AppoDealHide = () => {
-  Appodeal.hide(Appodeal.BANNER);
+  Appodeal.isLoaded(Appodeal.BANNER, (isLoaded) => {
+    if (isLoaded) {
+      Appodeal.hide(Appodeal.BANNER);
+    }
+  });
 };
