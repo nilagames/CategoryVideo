@@ -32,7 +32,6 @@ class VideoScreen extends Component {
   }
 
   changeFullScreen(e) {
-    console.log(e, "Fullscreen");
     if (!e.isFullscreen) {
       this.goBack();
     }
