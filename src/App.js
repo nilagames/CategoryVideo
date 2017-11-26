@@ -34,9 +34,7 @@ class App extends Component {
             onNavigationStateChange={(prevState, currentState) => {
               const currentScreen = getCurrentRouteName(currentState);
               const prevScreen = getCurrentRouteName(prevState);
-
               if (prevScreen !== currentScreen) {
-                console.log("inge thaen kudi iruken");
                 AppoDealShow();
               }
             }}
