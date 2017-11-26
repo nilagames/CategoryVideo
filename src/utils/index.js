@@ -23,7 +23,11 @@ export const AppoDealShow = (placement) => {
 };
 
 export const AppoDealHide = () => {
-  Appodeal.hide(adtype);
+  Appodeal.isLoaded(adtype, (isLoaded) => {
+    if (isLoaded) {
+      Appodeal.hide(adtype);
+    }
+  });
 };
 
 // gets the current screen from navigation state
