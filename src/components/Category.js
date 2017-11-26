@@ -5,7 +5,6 @@ import { CachedImage } from "react-native-img-cache";
 
 const CellView = styled.View`
   margin: 5px;
-  marginRight: 0px;
   marginBottom: 0px;
   backgroundColor: ${props => props.color};
   height: ${props => props.height};

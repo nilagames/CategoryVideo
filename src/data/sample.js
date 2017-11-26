@@ -45,7 +45,7 @@ const CATEGORIES = CATEGORIES_RAW.map((_, i) => {
   _.id = `category_${i}`;
   _.image = VIDEOLIST[i % VIDEOLIST.length].thumbnail;
   _.color = RANDOM_COLORS[i % RANDOM_COLORS.length];
-  _.height = 200;
+  _.height = 240;
   return _;
 });
 
