@@ -1,29 +1,29 @@
 import { Appodeal } from 'react-native-appodeal';
 import config from '../../config';
 
+const adtype = Appodeal.BANNER;
+
 export const AppoDealInit = () => {
-  Appodeal.setTesting(true);
-  Appodeal.setLogLevel(Appodeal.LogLevel.debug);
+  Appodeal.setAutoCache(adtype, true);
 
   Appodeal.setSmartBanners(true);
   Appodeal.setBannerAnimation(true);
   Appodeal.setTabletBanners(true);
   Appodeal.setBannerBackground(true);
 
-  Appodeal.setAutoCache(Appodeal.BANNER, true);
-  Appodeal.initialize(config.appodealKey, Appodeal.BANNER);
+  Appodeal.setTesting(true);
+  Appodeal.setLogLevel(Appodeal.LogLevel.verbose);
+
+  Appodeal.initialize(config.appodealKey, adtype);
 };
 
-export const AppoDealShow = () => {
-  Appodeal.show(Appodeal.BANNER, "initial_screen", (result) => console.log(result));
+export const AppoDealShow = (placement) => {
+  if (placement) Appodeal.show(adtype, placement);
+  Appodeal.show(adtype, "initial_screen");
 };
 
 export const AppoDealHide = () => {
-  Appodeal.isLoaded(Appodeal.BANNER, (isLoaded) => {
-    if (isLoaded) {
-      Appodeal.hide(Appodeal.BANNER);
-    }
-  });
+  Appodeal.hide(adtype);
 };
 
 // gets the current screen from navigation state

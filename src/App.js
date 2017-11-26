@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   render() {
-    AppoDealShow();
+    AppoDealShow("Home");
     return (
       <ThemeProvider theme={colors}>
         <Root>
@@ -35,7 +35,7 @@ class App extends Component {
               const currentScreen = getCurrentRouteName(currentState);
               const prevScreen = getCurrentRouteName(prevState);
               if (prevScreen !== currentScreen) {
-                AppoDealShow();
+                AppoDealShow(currentScreen);
               }
             }}
           />

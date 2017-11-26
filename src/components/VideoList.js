@@ -6,7 +6,7 @@ import { CachedImage } from "react-native-img-cache";
 import { PlayIcon } from './icons';
 
 const CellView = styled.View`
-  margin: 10px;
+  margin: 5px;
   marginBottom: 0px;
   backgroundColor: ${props => props.color};
   height: ${props => props.height};
