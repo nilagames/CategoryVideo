@@ -8,6 +8,7 @@ import { CATEGORIES } from '../data/sample';
 
 const MasonryView = styled.View`
   marginBottom: 50px;
+  paddingRight: 5px;
 `;
 
 class HomeScreen extends Component {
@@ -27,9 +28,9 @@ class HomeScreen extends Component {
           onRefresh={this._refreshRequest}
           refreshing={this.state.isRefreshing}
           data={CATEGORIES}
-          renderItem={({ item }) => <Category item={item} height={'200px'} navigate={this.props.navigation.navigate} />}
+          renderItem={({ item }) => <Category item={item} height={'140px'} navigate={this.props.navigation.navigate} />}
           getHeightForItem={({ item }) => item.height + 2}
-          numColumns={1}
+          numColumns={2}
           keyExtractor={item => item.id}
         />
         <FloatingAction />

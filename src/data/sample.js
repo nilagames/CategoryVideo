@@ -31,16 +31,6 @@ const DATA = Array.from({ length: 20 }).map((_, i) => ({
   color: RANDOM_COLORS[i % RANDOM_COLORS.length],
 }));
 
-const HOME_DATA = Array.from({ length: 10 }).map((_, i) => ({
-  id: `home_${i}`,
-  text: VIDEOLIST[i % VIDEOLIST.length].title,
-  source: VIDEOLIST[i % VIDEOLIST.length].source,
-  videoID: VIDEOLIST[i % VIDEOLIST.length].id,
-  thumbnail: VIDEOLIST[i % VIDEOLIST.length].thumbnail,
-  height: 200,
-  color: RANDOM_COLORS[i % RANDOM_COLORS.length],
-}));
-
 const CATEGORIES_RAW = [
   { name: 'Alphabets', image: '', url: 'alphabets' },
   { name: 'Fruits', image: '', url: 'fruits' },
@@ -55,12 +45,11 @@ const CATEGORIES = CATEGORIES_RAW.map((_, i) => {
   _.id = `category_${i}`;
   _.image = VIDEOLIST[i % VIDEOLIST.length].thumbnail;
   _.color = RANDOM_COLORS[i % RANDOM_COLORS.length];
-  _.height = 260;
+  _.height = 200;
   return _;
 });
 
 export {
   DATA,
-  HOME_DATA,
   CATEGORIES,
 };

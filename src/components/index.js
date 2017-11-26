@@ -2,7 +2,7 @@ import Button from './Button';
 import CustomDrawerContent from './CustomDrawerContent';
 import Cell from './Cell';
 import VideoList from './VideoList';
-import CategoryList from './CategoryList';
+import VideoCategory from './VideoCategory';
 import Category from './Category';
 import FloatingAction from './FloatingAction';
 
@@ -11,7 +11,7 @@ export {
   CustomDrawerContent,
   Cell,
   VideoList,
-  CategoryList,
+  VideoCategory,
   Category,
   FloatingAction,
 };

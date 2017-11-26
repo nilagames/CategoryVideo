@@ -16,7 +16,7 @@ const CategoryTitle = styled.Text`
   color: ${props => props.theme.textColor};
 `;
 
-class CategoryList extends Component {
+class VideoCategory extends Component {
   render() {
     return (
       <CategoryView>
@@ -32,4 +32,4 @@ class CategoryList extends Component {
   }
 };
 
-export default CategoryList;
+export default VideoCategory;

@@ -5,13 +5,13 @@ import { CachedImage } from "react-native-img-cache";
 
 const CellView = styled.View`
   margin: 5px;
+  marginRight: 0px;
   marginBottom: 0px;
   backgroundColor: ${props => props.color};
   height: ${props => props.height};
   elevation: 10;
   borderRadius: 3;
   overflow: hidden;
-  minWidth: 320px;
 `;
 const TitleText = styled.Text`
   textAlign: center;
