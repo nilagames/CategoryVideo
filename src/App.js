@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import { StatusBar, Platform } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components/native';
+import { GoogleAnalyticsTracker } from 'react-native-google-analytics-bridge';
 
 import Navigator from './Navigator';
 import { FloatingAction } from './components';
 import { colors } from './utils/constants';
 import { AppoDealInit, AppoDealShow, getCurrentRouteName } from './utils';
+
+const tracker = new GoogleAnalyticsTracker('UA-110211252-1');
 
 const Root = styled.View`
   flex: 1;
@@ -25,6 +28,7 @@ class App extends Component {
 
   render() {
     AppoDealShow("Home");
+    tracker.trackScreenView('Home');
     return (
       <ThemeProvider theme={colors}>
         <Root>
@@ -36,6 +40,7 @@ class App extends Component {
               const prevScreen = getCurrentRouteName(prevState);
               if (prevScreen !== currentScreen) {
                 AppoDealShow(currentScreen);
+                tracker.trackScreenView(currentScreen);
               }
             }}
           />

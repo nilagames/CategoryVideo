@@ -52,6 +52,11 @@
 		DFA76CC5865B46EEA5659EFC /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43321713AA264E2CBAB3C0A5 /* Zocial.ttf */; };
 		78B23A7D0B6246A4A878A476 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F644115170B24CFB9E65BF1B /* libRCTOrientation.a */; };
 		32351DB7C96F4DC1BC7FD380 /* libRNAppodeal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CC4BE752324EFA8E9D431C /* libRNAppodeal.a */; };
+		3D3B36E762FB47ED9AF1C7FF /* libRCTGoogleAnalyticsBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5058B4C8CF734AAC9EAD2D8F /* libRCTGoogleAnalyticsBridge.a */; };
+		2E18955AEBE74A94915B3528 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6D2C6BCC5D4074BE119CBE /* CoreData.framework */; };
+		9C42161588544EC5B91957CE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E583ACEBE23473B9D43B472 /* SystemConfiguration.framework */; };
+		6170052F9CF24AE6BFC19C06 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 983511AE8E1141F5A1F62400 /* libz.tbd */; };
+		4EA28C76C0CC4B86B1C0F572 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5883BFB177864FE68A5214B1 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -300,6 +305,12 @@
 		F644115170B24CFB9E65BF1B /* libRCTOrientation.a */ = {isa = PBXFileReference; name = "libRCTOrientation.a"; path = "libRCTOrientation.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		EB79A59A9E8A485284EA4D70 /* RNAppodeal.xcodeproj */ = {isa = PBXFileReference; name = "RNAppodeal.xcodeproj"; path = "../node_modules/react-native-appodeal/ios/RNAppodeal.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		43CC4BE752324EFA8E9D431C /* libRNAppodeal.a */ = {isa = PBXFileReference; name = "libRNAppodeal.a"; path = "libRNAppodeal.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		A0B96A7680C8472D99577879 /* RCTGoogleAnalyticsBridge.xcodeproj */ = {isa = PBXFileReference; name = "RCTGoogleAnalyticsBridge.xcodeproj"; path = "../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/RCTGoogleAnalyticsBridge.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		5058B4C8CF734AAC9EAD2D8F /* libRCTGoogleAnalyticsBridge.a */ = {isa = PBXFileReference; name = "libRCTGoogleAnalyticsBridge.a"; path = "libRCTGoogleAnalyticsBridge.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3F6D2C6BCC5D4074BE119CBE /* CoreData.framework */ = {isa = PBXFileReference; name = "CoreData.framework"; path = "System/Library/Frameworks/CoreData.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9E583ACEBE23473B9D43B472 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		983511AE8E1141F5A1F62400 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		5883BFB177864FE68A5214B1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; name = "libsqlite3.0.tbd"; path = "usr/lib/libsqlite3.0.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +344,11 @@
 				3E141E4D30E04BCEB1521E95 /* libRCTYouTube.a in Frameworks */,
 				78B23A7D0B6246A4A878A476 /* libRCTOrientation.a in Frameworks */,
 				32351DB7C96F4DC1BC7FD380 /* libRNAppodeal.a in Frameworks */,
+				3D3B36E762FB47ED9AF1C7FF /* libRCTGoogleAnalyticsBridge.a in Frameworks */,
+				2E18955AEBE74A94915B3528 /* CoreData.framework in Frameworks */,
+				9C42161588544EC5B91957CE /* SystemConfiguration.framework in Frameworks */,
+				6170052F9CF24AE6BFC19C06 /* libz.tbd in Frameworks */,
+				4EA28C76C0CC4B86B1C0F572 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +522,7 @@
 				D29A34F59A2141BCAA501BFC /* RCTYouTube.xcodeproj */,
 				D3A24FBAE8AE44F1A67CDE16 /* RCTOrientation.xcodeproj */,
 				EB79A59A9E8A485284EA4D70 /* RNAppodeal.xcodeproj */,
+				A0B96A7680C8472D99577879 /* RCTGoogleAnalyticsBridge.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -527,6 +544,7 @@
 				00E356EF1AD99517003FC87E /* KidsRhymesTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				CB4E61662DDF46128C6603C9 /* Resources */,
+				D29C3408DA624ED095FEEC82 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -568,6 +586,18 @@
 				43321713AA264E2CBAB3C0A5 /* Zocial.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
+		D29C3408DA624ED095FEEC82 /* Frameworks */ = {
+			isa = "PBXGroup";
+			children = (
+				3F6D2C6BCC5D4074BE119CBE /* CoreData.framework */,
+				9E583ACEBE23473B9D43B472 /* SystemConfiguration.framework */,
+				983511AE8E1141F5A1F62400 /* libz.tbd */,
+				5883BFB177864FE68A5214B1 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 			path = "";
 		};
@@ -1089,6 +1119,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1097,6 +1128,7 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-appodeal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 				);
 			};
 			name = Debug;
@@ -1122,6 +1154,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1130,6 +1163,7 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-appodeal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 				);
 			};
 			name = Release;
@@ -1156,6 +1190,7 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-appodeal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 				);
 			};
 			name = Debug;
@@ -1181,6 +1216,7 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-appodeal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 				);
 			};
 			name = Release;
@@ -1215,6 +1251,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1223,6 +1260,7 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-appodeal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 				);
 			};
 			name = Debug;
@@ -1257,6 +1295,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1265,6 +1304,7 @@
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-appodeal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
 				);
 			};
 			name = Release;
@@ -1294,6 +1334,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1318,6 +1359,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
