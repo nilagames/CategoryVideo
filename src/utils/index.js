@@ -1,5 +1,6 @@
 import { Appodeal } from 'react-native-appodeal';
 import config from '../../config';
+import Share from 'react-native-share';
 
 const adtype = Appodeal.BANNER;
 
@@ -41,4 +42,11 @@ export const getCurrentRouteName = (navigationState) => {
     return getCurrentRouteName(route);
   }
   return route.routeName;
+};
+
+export const shareOptions = (url, message) => {
+  Share.open({
+    url: url,
+    message: message,
+  }).catch((err) => { err && console.log(err); });
 };
