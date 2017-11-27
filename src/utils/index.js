@@ -1,6 +1,8 @@
 import { Appodeal } from 'react-native-appodeal';
-import config from '../../config';
 import Share from 'react-native-share';
+import { Linking } from 'react-native';
+
+import config from '../../config';
 
 const adtype = Appodeal.BANNER;
 
@@ -49,4 +51,14 @@ export const shareOptions = (url, message) => {
     url: url,
     message: message,
   }).catch((err) => { err && console.log(err); });
+};
+
+export const openLink = (url) => {
+  Linking.canOpenURL(url).then(supported => {
+    if (!supported) {
+      console.log('Can\'t handle url: ' + url);
+    } else {
+      return Linking.openURL(url);
+    }
+  }).catch(err => console.error('An error occurred in opening link', err));
 };

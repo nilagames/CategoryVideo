@@ -3,16 +3,16 @@ import { StyleSheet, View } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import { shareOptions } from '../utils';
+import { shareOptions, openLink } from '../utils';
 
 class FloatingAction extends PureComponent {
   render() {
     return (
       <ActionButton fixNativeFeedbackRadius={true} buttonColor="rgba(229, 57, 53, 1)">
-        <ActionButton.Item buttonColor="#3498DB" title="Others Apps" onPress={() => {}}>
+        <ActionButton.Item buttonColor="#3498DB" title="Others Apps" onPress={() => { openLink('https://getbedtimestories.com/'); }}>
           <Icon name="md-appstore" style={styles.actionButtonIcon} />
         </ActionButton.Item>
-        <ActionButton.Item buttonColor="#1ABC9C" title="Rate the App" onPress={() => {}}>
+        <ActionButton.Item buttonColor="#1ABC9C" title="Rate the App" onPress={() => { openLink('https://play.google.com/store/apps/details?id=kidzooly.fivelittle&hl=en'); }}>
           <Icon name="md-star-half" style={styles.actionButtonIcon} />
         </ActionButton.Item>
         <ActionButton.Item buttonColor="#5FCADB" title="Share App" onPress={() => { shareOptions('url', 'message'); }}>
