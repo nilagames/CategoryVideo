@@ -3,6 +3,8 @@ import { StyleSheet, View } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import { shareOptions } from '../utils';
+
 class FloatingAction extends PureComponent {
   render() {
     return (
@@ -13,7 +15,7 @@ class FloatingAction extends PureComponent {
         <ActionButton.Item buttonColor="#1ABC9C" title="Rate the App" onPress={() => {}}>
           <Icon name="md-star-half" style={styles.actionButtonIcon} />
         </ActionButton.Item>
-        <ActionButton.Item buttonColor="#5FCADB" title="Share App" onPress={() => {}}>
+        <ActionButton.Item buttonColor="#5FCADB" title="Share App" onPress={() => { shareOptions('url', 'message'); }}>
           <Icon name="md-share" style={styles.actionButtonIcon} />
         </ActionButton.Item>
       </ActionButton>
