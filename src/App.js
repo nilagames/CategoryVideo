@@ -8,8 +8,9 @@ import Navigator from './Navigator';
 import { FloatingAction } from './components';
 import { colors } from './utils/constants';
 import { AppoDealInit, AppoDealShow, getCurrentRouteName } from './utils';
+import config from '../config';
 
-const tracker = new GoogleAnalyticsTracker('UA-110211252-1');
+const tracker = new GoogleAnalyticsTracker(config.GACode);
 
 const Root = styled.View`
   flex: 1;
