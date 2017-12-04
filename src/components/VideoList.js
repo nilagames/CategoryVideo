@@ -36,20 +36,20 @@ const ImageContainer = styled.View`
 
 class VideoList extends PureComponent {
   render() {
-    const { item, height, navigate } = this.props;
+    const { item, height, color, cellheight, navigate } = this.props;
 
     return (
-      <TouchableWithoutFeedback onPress={() => navigate('Video', { videoID: item.videoID })}>
-        <CellView {...item}>
+      <TouchableWithoutFeedback onPress={() => navigate('Video', { videoID: item.youtubeID })}>
+        <CellView {...item} height={cellheight} color={color}>
           <ImageContainer height={height}>
             <View style={styles.overlay}>
-              <PlayIcon onPress={() => navigate('Video', { videoID: item.videoID })} />
+              <PlayIcon onPress={() => navigate('Video', { videoID: item.youtubeID })} />
             </View>
-            <CachedImage source={{uri : item.thumbnail}} resizeMode="stretch"
+            <CachedImage source={{uri : item.image}} resizeMode="stretch"
               style={styles.thumbnail}
             />
           </ImageContainer>
-          <TitleText>{item.text}</TitleText>
+          <TitleText>{item.name}</TitleText>
           <SourceText>{item.source}</SourceText>
         </CellView>
       </TouchableWithoutFeedback>

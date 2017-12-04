@@ -3,6 +3,7 @@ import Share from 'react-native-share';
 import { Linking } from 'react-native';
 
 import config from '../../config';
+import { RANDOM_COLORS } from './constants';
 
 const adtype = Appodeal.BANNER;
 
@@ -61,4 +62,8 @@ export const openLink = (url) => {
       return Linking.openURL(url);
     }
   }).catch(err => console.error('An error occurred in opening link', err));
+};
+
+export const getColor = (i) => {
+  return RANDOM_COLORS[i % RANDOM_COLORS.length];
 };

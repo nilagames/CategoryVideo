@@ -26,11 +26,11 @@ const ImageContainer = styled.View`
 
 class Category extends PureComponent {
   render() {
-    const { item, height, navigate } = this.props;
+    const { item, height, color, cellheight, navigate } = this.props;
 
     return (
       <TouchableWithoutFeedback onPress={() => navigate('CategoryVideos', { item: item })}>
-        <CellView {...item}>
+        <CellView {...item} height={cellheight} color={color}>
           <ImageContainer height={height}>
             <View style={styles.overlay}>
             </View>
@@ -60,7 +60,7 @@ var styles = StyleSheet.create({
     bottom: 0,
     right: 0,
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
     width: '100%',
     height: '100%',
     zIndex: 1,
