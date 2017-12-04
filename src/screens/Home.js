@@ -4,7 +4,8 @@ import MasonryList from '@appandflow/masonry-list';
 import styled from 'styled-components/native';
 
 import { Category, FloatingAction } from '../components';
-import { CATEGORIES } from '../data/sample';
+import CATEGORIES from '../data/categories.json';
+import { getColor } from '../utils';
 
 const MasonryView = styled.View`
   marginBottom: 50px;
@@ -27,10 +28,10 @@ class HomeScreen extends Component {
           onRefresh={this._refreshRequest}
           refreshing={this.state.isRefreshing}
           data={CATEGORIES}
-          renderItem={({ item }) => <Category item={item} height={'180px'} navigate={this.props.navigation.navigate} />}
-          getHeightForItem={({ item }) => item.height + 2}
+          renderItem={({ item, index }) => <Category item={item} color={getColor(index)} cellheight={'240px'} height={'180px'} navigate={this.props.navigation.navigate} />}
+          getHeightForItem={({ item }) => (240 + 2)} // item.height from sample
           numColumns={1}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.ID}
         />
         <FloatingAction />
       </MasonryView>

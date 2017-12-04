@@ -27,7 +27,7 @@ const Routes = {
   Favorites: {
     screen: FavoritesScreen,
     navigationOptions: ({ navigation }) => ({
-      tabBarLabel: 'DAILY PLAYLIST',
+      tabBarLabel: 'CURATOR PICK',
       tabBarIcon: ({ tintColor }) => (
         <FontAwesome name="heartbeat" size={23} color={tintColor} />
       ),

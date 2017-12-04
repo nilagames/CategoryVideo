@@ -3,20 +3,21 @@ import Share from 'react-native-share';
 import { Linking } from 'react-native';
 
 import config from '../../config';
+import { RANDOM_COLORS } from './constants';
 
 const adtype = Appodeal.BANNER;
 
 export const AppoDealInit = () => {
   Appodeal.setAutoCache(adtype, true);
-
+  // smart settings
   Appodeal.setSmartBanners(true);
   Appodeal.setBannerAnimation(true);
   Appodeal.setTabletBanners(true);
   Appodeal.setBannerBackground(true);
-
+  // development settings
   Appodeal.setTesting(true);
   Appodeal.setLogLevel(Appodeal.LogLevel.verbose);
-
+  // init appodeal
   Appodeal.initialize(config.appodealKey, adtype);
 };
 
@@ -61,4 +62,8 @@ export const openLink = (url) => {
       return Linking.openURL(url);
     }
   }).catch(err => console.error('An error occurred in opening link', err));
+};
+
+export const getColor = (i) => {
+  return RANDOM_COLORS[i % RANDOM_COLORS.length];
 };
