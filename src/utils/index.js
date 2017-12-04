@@ -8,15 +8,15 @@ const adtype = Appodeal.BANNER;
 
 export const AppoDealInit = () => {
   Appodeal.setAutoCache(adtype, true);
-
+  // smart settings
   Appodeal.setSmartBanners(true);
   Appodeal.setBannerAnimation(true);
   Appodeal.setTabletBanners(true);
   Appodeal.setBannerBackground(true);
-
+  // development settings
   Appodeal.setTesting(true);
   Appodeal.setLogLevel(Appodeal.LogLevel.verbose);
-
+  // init appodeal
   Appodeal.initialize(config.appodealKey, adtype);
 };
 
