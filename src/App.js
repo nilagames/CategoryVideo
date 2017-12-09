@@ -8,6 +8,8 @@ import Navigator from './Navigator';
 import { FloatingAction } from './components';
 import { colors } from './utils/constants';
 import { AppoDealInit, AppoDealShow, getCurrentRouteName } from './utils';
+import Orientation from 'react-native-orientation';
+
 import config from '../config';
 
 const tracker = new GoogleAnalyticsTracker(config.GACode);
@@ -25,6 +27,10 @@ const StatusBarAndroid = styled.View`
 class App extends Component {
   componentWillMount() {
     AppoDealInit();
+  }
+
+  componentDidMount() {
+    Orientation.lockToPortrait();
   }
 
   render() {

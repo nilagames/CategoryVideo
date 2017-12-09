@@ -25,7 +25,7 @@ class VideoScreen extends Component {
   }
 
   componentWillUnmount() {
-    Orientation.unlockAllOrientations();
+    Orientation.lockToPortrait();
   }
 
   videoError(e) {}
