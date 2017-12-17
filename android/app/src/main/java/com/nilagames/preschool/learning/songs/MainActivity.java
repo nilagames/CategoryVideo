@@ -1,4 +1,4 @@
-package com.nilagames.appodeal;
+package com.nilagames.preschool.learning.songs;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "KidsRhymes";
+        return "KidsLearn";
     }
 }
