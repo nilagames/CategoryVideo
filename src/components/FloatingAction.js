@@ -9,13 +9,10 @@ class FloatingAction extends PureComponent {
   render() {
     return (
       <ActionButton fixNativeFeedbackRadius={true} buttonColor="rgba(229, 57, 53, 1)">
-        <ActionButton.Item buttonColor="#3498DB" title="Others Apps" onPress={() => { openLink('https://getbedtimestories.com/'); }}>
-          <Icon name="md-appstore" style={styles.actionButtonIcon} />
-        </ActionButton.Item>
-        <ActionButton.Item buttonColor="#1ABC9C" title="Rate the App" onPress={() => { openLink('https://play.google.com/store/apps/details?id=kidzooly.fivelittle&hl=en'); }}>
+        <ActionButton.Item buttonColor="#1ABC9C" title="Rate the App" onPress={() => { openLink('https://play.google.com/store/apps/details?id=com.nilagames.preschool.learning.songs'); }}>
           <Icon name="md-star-half" style={styles.actionButtonIcon} />
         </ActionButton.Item>
-        <ActionButton.Item buttonColor="#5FCADB" title="Share App" onPress={() => { shareOptions('url', 'message'); }}>
+        <ActionButton.Item buttonColor="#5FCADB" title="Share App" onPress={() => { shareOptions('https://play.google.com/store/apps/details?id=com.nilagames.preschool.learning.songs', 'Kids learning ABC, numbers, preschool video songs'); }}>
           <Icon name="md-share" style={styles.actionButtonIcon} />
         </ActionButton.Item>
       </ActionButton>
