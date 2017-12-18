@@ -5,7 +5,7 @@ import { Linking } from 'react-native';
 import config from '../../config';
 import { RANDOM_COLORS } from './constants';
 
-const adtype = Appodeal.BANNER;
+const adtype = Appodeal.BANNER_BOTTOM;
 
 export const AppoDealInit = () => {
   Appodeal.setAutoCache(adtype, true);
