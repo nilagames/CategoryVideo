@@ -17,6 +17,8 @@ export const AppoDealInit = () => {
   // development settings
   Appodeal.setTesting(true);
   Appodeal.setLogLevel(Appodeal.LogLevel.verbose);
+  Appodeal.setChildDirectedTreatment(true); // for child apps
+  Appodeal.muteVideosIfCallsMuted(true);
   // init appodeal
   Appodeal.initialize(config.appodealKey, adtype);
 };
