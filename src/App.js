@@ -7,7 +7,7 @@ import { GoogleAnalyticsTracker } from 'react-native-google-analytics-bridge';
 import Navigator from './Navigator';
 import { FloatingAction } from './components';
 import { colors } from './utils/constants';
-import { AppoDealInit, AppoDealShow, getCurrentRouteName } from './utils';
+import { getCurrentRouteName } from './utils';
 import Orientation from 'react-native-orientation';
 
 import config from '../config';
@@ -26,7 +26,6 @@ const StatusBarAndroid = styled.View`
 
 class App extends Component {
   componentWillMount() {
-    AppoDealInit();
   }
 
   componentDidMount() {
@@ -34,7 +33,6 @@ class App extends Component {
   }
 
   render() {
-    AppoDealShow("Home");
     tracker.trackScreenView('Home');
     return (
       <ThemeProvider theme={colors}>
@@ -46,7 +44,6 @@ class App extends Component {
               const currentScreen = getCurrentRouteName(currentState);
               const prevScreen = getCurrentRouteName(prevState);
               if (prevScreen !== currentScreen) {
-                AppoDealShow(currentScreen);
                 tracker.trackScreenView(currentScreen);
               }
             }}

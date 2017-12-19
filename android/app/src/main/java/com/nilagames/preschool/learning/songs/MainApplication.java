@@ -5,7 +5,6 @@ import android.app.Application;
 import com.facebook.react.ReactApplication;
 import cl.json.RNSharePackage;
 import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
-import com.reactlibrary.RNAppodealPackage;
 import com.github.yamill.orientation.OrientationPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
@@ -32,7 +31,6 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new RNSharePackage(),
             new GoogleAnalyticsBridgePackage(),
-            new RNAppodealPackage(),
             new OrientationPackage(),
             new RNFetchBlobPackage(),
             new ReactNativeYouTube(),

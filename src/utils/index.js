@@ -1,40 +1,8 @@
-import { Appodeal } from 'react-native-appodeal';
 import Share from 'react-native-share';
 import { Linking } from 'react-native';
 
 import config from '../../config';
 import { RANDOM_COLORS } from './constants';
-
-const adtype = Appodeal.BANNER_BOTTOM;
-
-export const AppoDealInit = () => {
-  Appodeal.setAutoCache(adtype, true);
-  // smart settings
-  Appodeal.setSmartBanners(true);
-  Appodeal.setBannerAnimation(true);
-  Appodeal.setTabletBanners(true);
-  Appodeal.setBannerBackground(true);
-  // development settings
-  Appodeal.setTesting(true);
-  Appodeal.setLogLevel(Appodeal.LogLevel.verbose);
-  Appodeal.setChildDirectedTreatment(true); // for child apps
-  Appodeal.muteVideosIfCallsMuted(true);
-  // init appodeal
-  Appodeal.initialize(config.appodealKey, adtype);
-};
-
-export const AppoDealShow = (placement) => {
-  if (placement) Appodeal.show(adtype, placement);
-  Appodeal.show(adtype, "initial_screen");
-};
-
-export const AppoDealHide = () => {
-  Appodeal.isLoaded(adtype, (isLoaded) => {
-    if (isLoaded) {
-      Appodeal.hide(adtype);
-    }
-  });
-};
 
 // gets the current screen from navigation state
 export const getCurrentRouteName = (navigationState) => {

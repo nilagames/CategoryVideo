@@ -7,7 +7,7 @@ import { getColor } from '../utils';
 import DATA from '../data/data';
 
 const MasonryView = styled.View`
-  marginBottom: 50px;
+  marginBottom: 0px;
 `;
 
 class FavoritesScreen extends Component {

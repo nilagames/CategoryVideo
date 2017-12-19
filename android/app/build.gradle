@@ -176,7 +176,6 @@ repositories {
 dependencies {
     compile project(':react-native-share')
     compile project(':react-native-google-analytics-bridge')
-    compile project(':react-native-appodeal')
     compile project(':react-native-orientation')
     compile project(':react-native-fetch-blob')
     compile project(':react-native-youtube')

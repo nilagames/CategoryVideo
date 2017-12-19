@@ -8,7 +8,7 @@ import CATEGORIES from '../data/categories.json';
 import { getColor } from '../utils';
 
 const MasonryView = styled.View`
-  marginBottom: 50px;
+  marginBottom: 0px;
 `;
 
 class HomeScreen extends Component {
