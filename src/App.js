@@ -38,7 +38,6 @@ class App extends Component {
     const currentScreen = getCurrentRouteName(currentState);
     const prevScreen = getCurrentRouteName(prevState);
     if (prevScreen !== currentScreen) {
-      console.log(prevScreen, currentScreen);
       if (currentScreen === 'Video') {
         this.setState({ showAds: false });
       } else {
