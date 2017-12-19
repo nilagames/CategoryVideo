@@ -3,6 +3,7 @@ import { StatusBar, Platform } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components/native';
 import { GoogleAnalyticsTracker } from 'react-native-google-analytics-bridge';
+import { AdMobBanner } from 'react-native-admob';
 
 import Navigator from './Navigator';
 import { colors } from './utils/constants';
@@ -24,12 +25,28 @@ const StatusBarAndroid = styled.View`
 `;
 
 class App extends Component {
-  componentWillMount() {
+  constructor(props) {
+    super(props);
+    this.state = { showAds: true };
   }
 
   componentDidMount() {
     Orientation.lockToPortrait();
   }
+
+  onNavigationStateChange = (prevState, currentState) => {
+    const currentScreen = getCurrentRouteName(currentState);
+    const prevScreen = getCurrentRouteName(prevState);
+    if (prevScreen !== currentScreen) {
+      console.log(prevScreen, currentScreen);
+      if (currentScreen === 'Video') {
+        this.setState({ showAds: false });
+      } else {
+        this.setState({ showAds: true });
+      }
+      tracker.trackScreenView(currentScreen);
+    }
+  };
 
   render() {
     tracker.trackScreenView('Home');
@@ -39,14 +56,17 @@ class App extends Component {
           <StatusBar barStyle={'light-content'} backgroundColor={'transparent'} translucent />
           { Platform.OS === 'android' && Platform.Version >= 20 ? <StatusBarAndroid /> : null }
           <Navigator
-            onNavigationStateChange={(prevState, currentState) => {
-              const currentScreen = getCurrentRouteName(currentState);
-              const prevScreen = getCurrentRouteName(prevState);
-              if (prevScreen !== currentScreen) {
-                tracker.trackScreenView(currentScreen);
-              }
-            }}
+            onNavigationStateChange={this.onNavigationStateChange}
           />
+          {
+            this.state.showAds ?
+              <AdMobBanner
+                adSize="fullBanner"
+                adUnitID={config.admobBannerID}
+                testDevices={[AdMobBanner.simulatorId]}
+                onAdFailedToLoad={error => console.error(error)}
+              /> : null
+          }
         </Root>
       </ThemeProvider>
     );

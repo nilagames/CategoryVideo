@@ -3391,6 +3391,12 @@ react-native-action-button@^2.8.2:
   dependencies:
     prop-types "^15.5.10"
 
+react-native-admob@^2.0.0-beta.4:
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/react-native-admob/-/react-native-admob-2.0.0-beta.4.tgz#db33f1e8f2b3050072688ac599d8a7faba7f9871"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-dismiss-keyboard/-/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
