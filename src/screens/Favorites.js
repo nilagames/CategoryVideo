@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components/native';
 import MasonryList from '@appandflow/masonry-list';
 
-import { VideoList, FloatingAction } from '../components';
+import { VideoList } from '../components';
 import { getColor } from '../utils';
 import DATA from '../data/data';
 
@@ -40,7 +40,6 @@ class FavoritesScreen extends Component {
           numColumns={1}
           keyExtractor={item => item.youtubeID}
         />
-        <FloatingAction />
       </MasonryView>
     );
   }

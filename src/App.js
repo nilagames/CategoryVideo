@@ -5,7 +5,6 @@ import styled from 'styled-components/native';
 import { GoogleAnalyticsTracker } from 'react-native-google-analytics-bridge';
 
 import Navigator from './Navigator';
-import { FloatingAction } from './components';
 import { colors } from './utils/constants';
 import { getCurrentRouteName } from './utils';
 import Orientation from 'react-native-orientation';
