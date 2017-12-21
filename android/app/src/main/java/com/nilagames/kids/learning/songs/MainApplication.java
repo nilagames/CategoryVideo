@@ -1,4 +1,4 @@
-package com.nilagames.preschool.learning.songs;
+package com.nilagames.kids.learning.songs;
 
 import android.app.Application;
 
