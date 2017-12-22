@@ -13,24 +13,57 @@ import VideoScreen from './screens/Video';
 import { CategoryIcon, BackIcon } from './components/icons';
 import { colors } from './utils/constants';
 
-const AppMainStack = StackNavigator({
+const Routes = {
   Home: {
     screen: HomeScreen,
     navigationOptions: ({ navigation }) => ({
-      drawerLabel: `Categories`,
-      drawerIcon: ({ tintColor }) => (
-        <Ionicons name="md-locate" size={23} color={tintColor} />
+      tabBarLabel: 'HOME',
+      tabBarIcon: ({ tintColor }) => (
+        <FontAwesome name="home" size={23} color={tintColor} />
       ),
-      headerStyle: {
-        backgroundColor: colors.headerStyle,
-      },
-      headerTitle: `Categories`,
-      headerTitleStyle: {
-        color: colors.WHITE,
-      },
-      headerLeft: <CategoryIcon onPress={() => {}} />,
+      header: null,
     })
   },
+  Favorites: {
+    screen: FavoritesScreen,
+    navigationOptions: ({ navigation }) => ({
+      tabBarLabel: 'CURATOR PICK',
+      tabBarIcon: ({ tintColor }) => (
+        <FontAwesome name="heartbeat" size={23} color={tintColor} />
+      ),
+      header: null,
+    })
+  },
+};
+
+const AppMainTab = TabNavigator(Routes, {
+  tabBarOptions: {
+    activeTintColor: colors.WHITE,
+    inactiveTintColor: colors.inactiveTintColor,
+    inactiveBackgroundColor: colors.tabBG,
+    activeBackgroundColor: colors.tabBG,
+    showIcon: Platform.OS === 'ios',
+    showLabel: true,
+    indicatorStyle: {
+      backgroundColor: colors.WHITE,
+      height: 3,
+    },
+    labelStyle: {
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+    style: {
+      backgroundColor: colors.tabBG,
+    },
+    upperCaseLabel: true,
+  },
+  tabBarPosition: Platform.OS === 'ios' ? 'bottom' : 'top',
+  swipeEnabled: true,
+  animationEnabled: true,
+});
+
+const AppMainStack = StackNavigator({
+  Home: { screen: AppMainTab },
   Video: {
     screen: VideoScreen,
     navigationOptions: ({ navigation }) => ({
