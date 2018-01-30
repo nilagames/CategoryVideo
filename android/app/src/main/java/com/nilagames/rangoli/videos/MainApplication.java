@@ -1,4 +1,4 @@
-package com.nilagames.kids.learning.songs;
+package com.nilagames.rangoli.videos;
 
 import android.app.Application;
 
